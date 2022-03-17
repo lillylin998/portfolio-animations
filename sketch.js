@@ -50,8 +50,8 @@ let font;
 let chnfont;
 
 function preload(){
-  font = loadFont('https://cdn.rawgit.com/lillylin998/portfolio-animations/main/Montserrat-Regular.ttf');
-  chnfont = loadFont('https://cdn.rawgit.com/lillylin998/portfolio-animations/main/qkhy-regular.ttf');
+  font = loadFont('https://combinatronics.com/lillylin998/portfolio-animations/main/Montserrat-Regular.ttf');
+  chnfont = loadFont('https://combinatronics.com/lillylin998/portfolio-animations/main/qkhy-regular.ttf');
 }
 
 function setup() {
@@ -129,7 +129,7 @@ class Dot{
       }else if(this.r>this.endr+120  && this.r <=this.endr+160){
         this.color=3;
       }
-      print(this.color)
+      //print(this.color)
 
       // if(this.color >= colors.length){
       //   this.color=0;
