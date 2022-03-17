@@ -47,6 +47,7 @@ let beaublue = [202, 229, 255];
 let colors = [ terracotta, orange, olivine ,columbiablue];
 
 let font;
+let chnfont;
 
 function preload(){
   font = loadFont('https://cdn.rawgit.com/lillylin998/portfolio-animations/main/Montserrat-Regular.ttf');
