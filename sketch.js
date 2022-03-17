@@ -49,8 +49,8 @@ let colors = [ terracotta, orange, olivine ,columbiablue];
 let font;
 
 function preload(){
-  font = loadFont('https://github.com/lillylin998/portfolio-animations/blob/main/Montserrat-Regular.ttf');
-  chnfont = loadFont('https://github.com/lillylin998/portfolio-animations/blob/main/qkhy-regular.ttf');
+  font = loadFont('https://cdn.rawgit.com/lillylin998/portfolio-animations/main/Montserrat-Regular.ttf');
+  chnfont = loadFont('https://cdn.rawgit.com/lillylin998/portfolio-animations/main/qkhy-regular.ttf');
 }
 
 function setup() {
