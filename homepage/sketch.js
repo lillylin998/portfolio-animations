@@ -50,6 +50,7 @@ let font;
 
 function preload(){
   font = loadFont('Montserrat-Regular.ttf');
+  chnfont = loadFont('qkhy-regular.ttf');
 }
 
 function setup() {
@@ -90,7 +91,8 @@ function draw() {
   text("Hi I'm Lilly",box.x,box.y+box.h-5);
   text("I'm a scientist-turned-designer",box2.x,box2.y+box2.h);
   text("based in NYC",box3.x,box3.y+box3.h)
-  text('莉莉',width/2,100);
+  // textFont(chnfont);
+  // text('莉莉',width/2,100);
 
 }
 
