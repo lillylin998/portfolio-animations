@@ -50,12 +50,13 @@ let font;
 let chnfont;
 
 function preload(){
-  font = loadFont('https://cdn.rawgit.com/lillylin998/portfolio-animations/main/Montserrat-Regular.ttf');
-  chnfont = loadFont('https://cdn.rawgit.com/lillylin998/portfolio-animations/main/qkhy-regular.ttf');
+  font = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations/Montserrat-Regular.ttf');
+  chnfont = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations/qkhy-regular.ttf');
 }
 
 function setup() {
-  createCanvas(windowWidth, 700);
+  let cnv = createCanvas(windowWidth, 700);
+  cnv.parent('sketch-holder');
  // colorMode(HSB);
   angleMode(DEGREES);
 
