@@ -50,8 +50,8 @@ let font;
 let chnfont;
 
 function preload(){
-  font = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations@main/Montserrat-Regular.ttf');
-  chnfont = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations@main/qkhy-regular.ttf');
+  font = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations/Montserrat-Regular.ttf');
+  chnfont = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations/qkhy-regular.ttf');
 }
 
 function setup() {
