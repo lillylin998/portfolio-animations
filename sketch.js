@@ -55,9 +55,9 @@ function preload(){
 }
 
 function setup() {
-  let cnv = createCanvas(windowWidth, 700);
-  let divv = getElementById('sketch-holder');
-  cnv.parent(divv);
+  var cnv = createCanvas(windowWidth, 700);
+  cnv.parent('sketch-holder');
+  print('changed');
  // colorMode(HSB);
   angleMode(DEGREES);
 
