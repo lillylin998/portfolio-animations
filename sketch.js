@@ -49,20 +49,28 @@ let colors = [ terracotta, orange, olivine ,columbiablue];
 let font;
 let chnfont;
 
+let stars = [];
+let cnv;
+
 function preload(){
   font = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations@main/Montserrat-Regular.ttf');
   chnfont = loadFont('https://cdn.jsdelivr.net/gh/lillylin998/portfolio-animations@main/Montserrat-Regular.ttf');
 }
 
 function setup() {
-  var cnv = createCanvas(windowWidth, 700);
+  cnv = createCanvas(windowWidth, 700);
   cnv.parent('sketch-holder');
+<<<<<<< Updated upstream
   print('changed');
  // colorMode(HSB);
+=======
+  // print('changed');
+
+>>>>>>> Stashed changes
   angleMode(DEGREES);
 
-      fairies.push(new Dot(width/2,height/2,width/3,colors));
-      fairies.push(new Dot(width/2,height/2,width/3-100,colors));
+      fairies.push(new Dot(width/2,height/2,width/2,colors));
+      fairies.push(new Dot(width/2,height/2,width/2-100,colors));
  // fairies.push(new Dot(width/2,height/2,width/2-200,colors));
 
 }
@@ -70,6 +78,14 @@ function setup() {
 function draw() {
   //background('#efeaff');
   background(39, 39, 39)
+  cnv.mouseMoved(drawStars);
+  for(let i in stars){
+    stars[i].display();
+    stars[i].update();
+    if(stars[i].x>=width || stars[i].x<=0 || stars[i].y>=height || stars[i].height <=height){
+      stars.splice(i,1);
+    }
+  }
   //background(oldlavender[0],oldlavender[1],oldlavender[2])
   for(let i in fairies){
     fairies[i].display();
@@ -78,11 +94,14 @@ function draw() {
 
  
 
-  let box = font.textBounds("Hi I'm Lilly",width/2-150,height/2,60);
+  let box = font.textBounds("Hi I'm Lilly",width/2-150,height/2-50,60);
   
-  let box2=font.textBounds("I'm a scientist-turned-designer",width/2-450,height/2+box.h+20,60);
-  let box3=font.textBounds("based in NYC",width/2-200,height/2+box.h+box2.h +50,60);
+  let box2=font.textBounds("I'm a scientist-turned-designer",width/2-450,height/2-50+box.h+20,60);
+  let box3=font.textBounds("based in NYC",width/2-200,height/2-50+box.h+box2.h +50,60);
   fill(241, 224, 197);
+  box.x=width/2-box.w/2;
+  box2.x=width/2-box2.w/2;
+  box3.x=width/2-box3.w/2;
   rect(box.x-20, box.y-10, box.w+40, box.h+20); 
   rect(box2.x-20,box2.y,box2.w+40,box2.h+20);
   rect(box3.x-20,box3.y-10,box3.w+40,box3.h+30);
@@ -97,6 +116,30 @@ function draw() {
   // textFont(chnfont);
   // text('莉莉',width/2,100);
 
+}
+
+function drawStars(){
+  stars.push(new Star(mouseX,mouseY,8));
+}
+
+class Star{
+  constructor(x,y,size){
+    this.x=x;
+    this.y=y;
+    this.d=size;
+    this.jitterx=random(-2,2);
+    this.jittery=random(-2,2);
+  }
+  display(){
+    fill(255,255,255,90);
+    noStroke(0);
+    ellipse(this.x,this.y,this.d,this.d);
+  }
+
+  update(){
+    this.x+=this.jitterx;
+    this.y+=this.jittery;
+  }
 }
 
 class Dot{
