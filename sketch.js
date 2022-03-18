@@ -60,13 +60,8 @@ function preload(){
 function setup() {
   cnv = createCanvas(windowWidth, 700);
   cnv.parent('sketch-holder');
-<<<<<<< Updated upstream
   print('changed');
  // colorMode(HSB);
-=======
-  // print('changed');
-
->>>>>>> Stashed changes
   angleMode(DEGREES);
 
       fairies.push(new Dot(width/2,height/2,width/2,colors));
