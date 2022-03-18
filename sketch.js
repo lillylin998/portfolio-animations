@@ -58,7 +58,7 @@ function setup() {
   var cnv = createCanvas(windowWidth, 700);
   cnv.parent('sketch-holder');
   print('changed');
- // colorMode(HSB);
+
   angleMode(DEGREES);
 
       fairies.push(new Dot(width/2,height/2,width/3,colors));
